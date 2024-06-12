@@ -1,7 +1,7 @@
 # Use uma imagem base do Node.js
 FROM node:14
 
-# Instale dependências do sistema
+# Instalar dependências do sistema
 RUN apt-get update && apt-get install -y ffmpeg
 
 # Crie e defina o diretório de trabalho
