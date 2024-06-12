@@ -1,7 +1,7 @@
 # Use uma imagem base do Node.js
 FROM node:14
 
-# Instale FFmpeg
+# Instale dependências do sistema
 RUN apt-get update && apt-get install -y ffmpeg
 
 # Crie e defina o diretório de trabalho
@@ -16,7 +16,7 @@ RUN npm install
 # Copie o código da aplicação para o diretório de trabalho
 COPY . .
 
-# Exponha a porta da aplicação (mude conforme necessário)
+# Expor a porta da aplicação (mude conforme necessário)
 EXPOSE 5678
 
 # Comando para iniciar a aplicação
