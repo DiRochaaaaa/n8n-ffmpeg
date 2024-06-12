@@ -1,8 +1,8 @@
-# Use uma imagem base do Node.js
-FROM node:14
+# Use uma imagem base com Node.js e FFmpeg
+FROM jrottenberg/ffmpeg:4.3-ubuntu
 
-# Instalar dependências do sistema
-RUN apt-get update && apt-get install -y ffmpeg
+# Instale o Node.js
+RUN apt-get update && apt-get install -y nodejs npm
 
 # Crie e defina o diretório de trabalho
 WORKDIR /usr/src/app
